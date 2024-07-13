@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>pre entrega 3</title>
+</head>
+
+<body>
+    <header>
+        <div class="titulo">
+            <div>diplomatura full stack developer - JavaScript: proyecto final</div>
+            <div>Marcelo Feltes 2024</div>
+            <a class="link" href="./Pages/APIs.html">Consumir APIs</a>
+        </div>
+        <div class="formulario" id="formulario">
+            <div class="formularioNombreEtiqueta etiqueta">Nombre:</div>
+            <input class="formularioNombre" id="formularioNombre" oninput="validarIngreso(this)" type="text"></input>
+            <div class="formularioAlturaEtiqueta etiqueta">Altura (cm):</div>
+            <input type="number" step="1" class="formularioAltura" id="formularioAltura" type="text"></input>
+            <div class="formularioPesoEtiqueta etiqueta"> Peso (kg):</div>
+            <input type="number" step="1" class="formularioPeso" id="formularioPeso" type="text"></input>
+            <div class="formularioBotones">
+                <button class="btnAgregar" id="btnAgregar">Agregar</button>
+                <button class="btnDefault" id="btnDefault">Default</button>
+                <button class="btnMensaje" id="btnMensaje">Mensaje</button>
+            </div>
+            <div class="formularioNombreOrden">
+                <div class="flecha" id="flechaNombreAscendente"><a href="">🔼</a></div>
+                <div class="flecha" id="flechaNombreDescendente"><a href="">🔽</a></div>
+            </div>
+            <div class="formularioNombreTitulo etiqueta">
+                Nombre
+            </div>
+            <div class="formularioAlturaOrden">
+                <div class="flecha" id="flechaAlturaAscendente"><a href="">🔼</a></div>
+                <div class="flecha" id="flechaAlturaDescendente"><a href="">🔽</a></div>
+            </div>
+            <div class="formularioAlturaTitulo etiqueta">
+                Altura [cm]
+            </div>
+            <div class="formularioPesoOrden">
+                <div class="flecha" id="flechaPesoAscendente"><a href="">🔼</a></div>
+                <div class="flecha" id="flechaPesoDescendente"><a href="">🔽</a></div>
+            </div>
+            <div class="formularioPesoTitulo etiqueta">
+                Peso [kg]
+            </div>
+            <div class="formularioMasaCorporalOrden">
+                <div class="flecha" id="flechaMasaCorporalAscendente"><a href="">🔼</a></div>
+                <div class="flecha" id="flechaMasaCorporalDescendente"><a href="">🔽</a></div>
+            </div>
+            <div class="formularioMasaCorporalTitulo etiqueta">
+                IMC
+            </div>
+            <div class="formularioDictamenOrden">
+                <div class="flecha" id="flechaDictamenAscendente"><a href="">🔼</a></div>
+                <div class="flecha" id="flechaDictamenDescendente"><a href="">🔽</a></div>
+            </div>
+            <div class="formularioDictamenTitulo etiqueta">
+                Dictamen [peso]
+            </div>
+            <div id="formularioRegistrosNombre" class="formularioRegistrosNombre"> </div>
+            <div id="formularioRegistrosAltura" class="formularioRegistrosAltura"> </div>
+            <div id="formularioRegistrosPeso" class="formularioRegistrosPeso"> </div>
+            <div id="formularioRegistrosMasaCorporal" class="formularioRegistrosMasaCorporal"> </div>
+            <div id="formularioRegistrosDictamen" class="formularioRegistrosDictamen"> </div>
+            <div id="formularioRegistrosDictamenModificar" class="formularioRegistrosDictamenModificar"> </div>
+            <div id="formularioRegistrosBotones" class="formularioRegistrosBotones"> </div>
+        </div>
+    </header>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="./assets/js/default.js"></script>
+<script src="./assets/js/main.js"></script>
+
+</html>

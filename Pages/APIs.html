@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>pre entrega 3</title>
+</head>
+
+<body>
+    <header>
+        <div class="titulo">
+            <div>diplomatura full stack developer - JavaScript: proyecto final</div>
+            <div>Marcelo Feltes 2024</div>
+            <a class="link" href="../index.html">Principal</a>
+        </div>
+        <div class = "titulo">
+            <button class="btnAceptar" id="cargarRecetas">Cargar</button>
+            <button class="btnMensaje" id="btnMensaje2">Mensaje</button>
+            <select class = "menu" name="menu" id="menu">
+                <option value="">Mostrar todo</option>
+                <option value="Breakfast Recipes">Desayunos</option>
+                <option value="Appetizer and Snacks Recipes">Snacks</option>
+                <option value="Beef Recipes">Carne</option>
+                <option value="Pork And Other Red Meat">Cerdo</option>
+                <option value="Poultry Recipes">Pollo</option>
+                <option value="Fish and Seafood Recipes">Pescados</option>
+                <option value="Soups and Stews Recipes">Sopas</option>
+                <option value="Desserts Recipes">Postres</option>
+                <option value="Vegan and Vegetarian Recipes">Vegetariano/Vegano</option>
+                <option value="Drinks And Smoothies">Bebidas</option>
+            </select>
+        </div>
+        <div class="tabla" id="tabla"> </div>
+    </header>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="../assets/js/API.js"></script>
+
+</html>
