@@ -99,7 +99,7 @@ const recuperarDatosLocalStorage = (i) => {
     arrayPersonas.forEach((persona, index) => {
         i !== null ?
             index === i ?(
-                acumuladorRegistroNombre += `<input id = "registroNombreModificar${index}" type = "text" value = "${persona.nombre}" oninput="validarIngreso(this)" style = "width: auto; text-align: center"></input>`,
+                acumuladorRegistroNombre += `<input id = "registroNombreModificar${index}" type = "text" value = "${persona.nombre}" oninput="validarIngreso(this)" style = "width: 100%; text-align: center"></input>`,
                 acumuladorRegistroAltura += `<input id = "registroAlturaModificar${index}" type = "number" step = "1" value = "${persona.altura}" style = "width: 50%; text-align: center"></input>`,
                 acumuladorRegistroPeso += `<input id = "registroPesoModificar${index}" type = "number" step = "1" value = "${persona.peso}" style = "width: 50%; text-align: center"></input>`,
                 acumuladorRegistroMasaCorporal += `<div class = "formularioRegistrosmasaCorporal registro"> ${persona.masaCorporal}</div>`,
