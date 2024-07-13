@@ -107,7 +107,7 @@ btnMensaje2.addEventListener("click", () => {
     Swal.fire({
         title: "¡Bienvenido!",
         text: "Elegi las recetas Keto que prefieras",
-        imageUrl: '../img/logo.jpg',
+        imageUrl: '../assets/img/logo.jpg',
         imageWidth: 200,
         imageHeight: 200,
         imageAlt: "logo CODERHOUSE",

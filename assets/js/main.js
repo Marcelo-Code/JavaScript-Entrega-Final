@@ -221,7 +221,7 @@ btnMensaje.addEventListener("click", () => {
     Swal.fire({
         title: "¡Bienvenido!",
         text: "Agrega registros, modificalos y ordenalos, podes cargar los registros predeterminados con el boton DEFAULT",
-        imageUrl: '../img/logo.jpg',
+        imageUrl: './assets/img/logo.jpg',
         imageWidth: 200,
         imageHeight: 200,
         imageAlt: "logo CODERHOUSE",
