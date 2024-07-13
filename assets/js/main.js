@@ -80,8 +80,16 @@ const agregarPersona = () => {
         Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: "¡Campos vacíos!",
-            footer: "Completá y volvé a intentar..."
+            text: "¡Campos vacios!",
+            footer: "Completá y volvé a intentar...",
+            customClass: {
+                popup: 'custom-swal-font custom-swal-bg',
+                header: 'custom-swal-font custom-swal-bg',
+                title: 'custom-swal-font custom-swal-bg',
+                content: 'custom-swal-font custom-swal-bg',
+                confirmButton: 'custom-swal-font custom-swal-bg',
+                cancelButton: 'custom-swal-font custom-swal-bg'
+            }
         });
 }
 
