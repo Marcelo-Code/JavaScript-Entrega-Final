@@ -30,29 +30,29 @@ async function obtenerDatos() {
 
 //Se cargan los datos guardados en el localStorage al DOM
 
-async function cargarRecetas(){
+async function cargarRecetas() {
     const data = JSON.parse(localStorage.getItem("recetas"));
     let acumuladorLista = "";
-        data.forEach((element, index) => {
-            acumuladorLista += `<div class = "card">`;
-            acumuladorLista += `
+    data.forEach((element, index) => {
+        acumuladorLista += `<div class = "card">`;
+        acumuladorLista += `
             <a class="fa-solid fa-xmark" onclick = "eliminarReceta(${index})"></a><br>
             <h2>${element.recipe}</h2>
             <h3>${element.category.category}</h3>
             `;
-            acumuladorLista += `<ol type = "1">`;
-            for (let propiedad in element) {
-                (propiedad.startsWith('directions_step_') && element[propiedad] != null) ? 
-                    acumuladorLista += `<li lang="en" data-translate="spanish">${element[propiedad]}</li>` : null;
-            }
-            acumuladorLista +=`</ol></div>`;
-            tabla.innerHTML = acumuladorLista;
-        });
+        acumuladorLista += `<ol type = "1">`;
+        for (let propiedad in element) {
+            (propiedad.startsWith('directions_step_') && element[propiedad] != null) ?
+            acumuladorLista += `<li lang="en" data-translate="spanish">${element[propiedad]}</li>`: null;
+        }
+        acumuladorLista += `</ol></div>`;
+        tabla.innerHTML = acumuladorLista;
+    });
 }
 
 //Se elimina la receta especificada del localStorage y se actualiza el DOM
 
-const eliminarReceta = (index) =>{
+const eliminarReceta = (index) => {
     const data = JSON.parse(localStorage.getItem("recetas"));
     data.splice(index, 1);
     localStorage.setItem("recetas", JSON.stringify(data));
@@ -61,47 +61,51 @@ const eliminarReceta = (index) =>{
 
 //Se actualiza el DOM de acuero al tipo de receta elegida en el menú
 
-const cargarOpcionElegida = () =>{
+const cargarOpcionElegida = () => {
     const data = JSON.parse(localStorage.getItem("recetas"));
     let acumuladorLista = "";
-
-    menu.value == "" ? cargarRecetas() 
-    :(
-    data.forEach((element, index) => {
-        if(element.category.category === menu.value){
-            acumuladorLista += `<div class = "card">`;
-            acumuladorLista += `
+    menu.value == "" ? cargarRecetas() :
+        (
+            data.forEach((element, index) => {
+                if (element.category.category === menu.value) {
+                    acumuladorLista += `<div class = "card">`;
+                    acumuladorLista += `
             <a class="fa-solid fa-xmark" onclick = "eliminarReceta(${index})"></a><br>
             <h2>${element.recipe}</h2>
             <h3>${element.category.category}</h3>
             `;
-            acumuladorLista += `<ol type = "1">`;
-            for (let propiedad in element) {
-                propiedad.startsWith('directions_step_') && element[propiedad] != null ?
-                    acumuladorLista += `<li lang="en" data-translate="spanish">${element[propiedad]}</li>`
-                :
-                null
-            }
-            acumuladorLista +=`</ol></div>`;
-            tabla.innerHTML = acumuladorLista;
-        }
-        acumuladorLista == "" ? (
-            acumuladorLista = `<div></div>`,
-            tabla.innerHTML = acumuladorLista
+                    acumuladorLista += `<ol type = "1">`;
+                    for (let propiedad in element) {
+                        propiedad.startsWith('directions_step_') && element[propiedad] != null ?
+                            acumuladorLista += `<li lang="en" data-translate="spanish">${element[propiedad]}</li>` :
+                            null
+                    }
+                    acumuladorLista += `</ol></div>`;
+                    tabla.innerHTML = acumuladorLista;
+                }
+                acumuladorLista == "" ? (
+                        acumuladorLista = `<div></div>`,
+                        tabla.innerHTML = acumuladorLista
+                    ) :
+                    null
+            })
         )
-        : null
-    })
-    )
 }
+
+//Se cargan los datos desde la URL seleccionada
 
 cargarDatos.addEventListener("click", () => {
     obtenerDatos();
     cargarOpcionElegida()
 });
 
+//Se filtran los datos de acuerdo a la opción que se elija en el menú
+
 menu.addEventListener("change", () => {
     cargarOpcionElegida()
 });
+
+//Se muestra mensaje de bienvenida
 
 btnMensaje2.addEventListener("click", () => {
     Swal.fire({
@@ -119,5 +123,5 @@ btnMensaje2.addEventListener("click", () => {
             confirmButton: 'custom-swal-font custom-swal-bg',
             cancelButton: 'custom-swal-font custom-swal-bg'
         }
-      });
+    });
 })
